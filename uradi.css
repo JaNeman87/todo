@@ -1,0 +1,104 @@
+.gotovo-true{
+    text-decoration: line-through;
+    color: #81cd50
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.controller{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.uradiBox{
+    border-style: solid;
+    border-width: 2px;
+    border-color: #373737;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #59267c;
+    /* width: 600px; */
+}
+
+.uradiBoxDjani{
+    border-style: solid;
+    border-width: 2px;
+    border-color: #373737;
+    border-radius: 10px;
+    padding: 20px;
+    background-image: url('./dani.jpg');
+    background-color: #cccccc; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+
+.preostalo{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center
+}
+
+.obrisiBtn{
+    text-decoration: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #373737;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #81cd50;
+    color: #ffffff;
+}
+
+.uradjeno{
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    background-color: #81cd50
+}
+
+ul {
+    list-style-type: none;
+  }
+
+  li{
+      color:white;
+  }
+
+  .inputBar{
+      border-radius: 10px;
+      padding:5px;
+      outline: none
+  }
+
+  .btn{
+      border-radius: 10px;
+      padding:5px;
+      width:60px;
+      margin-left: 10px;
+      outline: none;
+      background-color: #81cd50;
+      color:white;
+  }
+
+  .djani{
+      color: yellow
+  }
+
+  .djaniCentered{
+      display:flex;
+      flex-direction: row;
+      justify-content: center;
+      align-content: center
+  }

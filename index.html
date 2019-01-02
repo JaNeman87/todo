@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="UradiApp">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Uradi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <script src="uradi.js"></script>
+    <link rel="stylesheet" href="uradi.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="controller" ng-controller="uradiKontroler as lista">
+        <div ng-class="lista.uradi.length === 0 ? 'uradiBoxDjani' : 'uradiBox'">
+          <div class="preostalo" ng-if="lista.uradi.length !== 0">
+            <div class="uradjeno">
+              <span
+                >Preostalo {{ lista.preostalo() }} od
+                {{ lista.uradi.length }}</span
+              >
+            </div>
+            <a href="" class="obrisiBtn" ng-click="lista.obrisi()">Obrisi</a>
+          </div>
+          <div class="djaniCentered">
+            <div ng-if="lista.uradi.length === 0" class="djani">
+              <h1>#NoDjaniNoParty</h1>
+            </div>
+          </div>
+          <ul>
+            <li ng-repeat="uradi in lista.uradi">
+              <label class="checkbox">
+                <input type="checkbox" ng-model="uradi.gotovo" />
+                <span class="gotovo-{{ uradi.gotovo }}">{{ uradi.text }}</span>
+              </label>
+            </li>
+          </ul>
+          <form name="form" ng-submit="lista.dodaj()">
+            <input
+              class="inputBar"
+              type="text"
+              ng-model="lista.uradiText"
+              size="30"
+              placeholder="Dodaj novi zadatak"
+              required
+            />
+            <input
+              class="btn-primary btn"
+              type="submit"
+              value="Dodaj"
+              ng-disabled="form.$invalid"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
